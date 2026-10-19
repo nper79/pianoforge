@@ -1,0 +1,382 @@
+{
+ "songs": [
+  {
+   "id": "two-little-chords-415106",
+   "title": "Two Little Chords",
+   "file": "two-little-chords-415106.json",
+   "duration": 120.08,
+   "builtin": false,
+   "added": 1792415106,
+   "kind": "banda",
+   "audio": "two-little-chords-415106.backing.mp3",
+   "credit": null,
+   "order": 0,
+   "counts": {
+    "facil": 128,
+    "medio": 242,
+    "dificil": 722,
+    "completo": 1402,
+    "acordes": 320
+   }
+  },
+  {
+   "id": "frere-jacques",
+   "title": "Frère Jacques",
+   "file": "frere-jacques.json",
+   "duration": 19.46,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "counts": {
+    "facil": 32,
+    "medio": 40,
+    "dificil": 72,
+    "acordes": 4
+   }
+  },
+  {
+   "id": "parabens-a-voce",
+   "title": "Happy Birthday",
+   "file": "parabens-a-voce.json",
+   "duration": 17.3,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "counts": {
+    "facil": 25,
+    "medio": 34,
+    "dificil": 71,
+    "acordes": 36
+   }
+  },
+  {
+   "id": "jingle-bells",
+   "title": "Jingle Bells",
+   "file": "jingle-bells.json",
+   "duration": 34.1,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "counts": {
+    "facil": 51,
+    "medio": 67,
+    "dificil": 137,
+    "acordes": 40
+   }
+  },
+  {
+   "id": "mary-cordeirinho",
+   "title": "Mary Had a Little Lamb",
+   "file": "mary-cordeirinho.json",
+   "duration": 19.46,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "counts": {
+    "facil": 26,
+    "medio": 34,
+    "dificil": 70,
+    "acordes": 32
+   }
+  },
+  {
+   "id": "ode-a-alegria",
+   "title": "Ode to Joy (Beethoven)",
+   "file": "ode-a-alegria.json",
+   "duration": 20.2,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "counts": {
+    "facil": 30,
+    "medio": 39,
+    "dificil": 78,
+    "acordes": 36
+   }
+  },
+  {
+   "id": "brilha-brilha-estrelinha",
+   "title": "Twinkle, Twinkle, Little Star",
+   "file": "brilha-brilha-estrelinha.json",
+   "duration": 31.0,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "counts": {
+    "facil": 42,
+    "medio": 79,
+    "dificil": 163,
+    "acordes": 148
+   }
+  },
+  {
+   "id": "mutopia-minueto-em-sol",
+   "title": "Minuet in G",
+   "file": "mutopia-minueto-em-sol.json",
+   "duration": 41.64,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 10,
+   "counts": {
+    "acordes": 128,
+    "facil": 125,
+    "medio": 178,
+    "dificil": 204
+   }
+  },
+  {
+   "id": "mutopia-minueto-em-la-menor",
+   "title": "Minuet in A minor",
+   "file": "mutopia-minueto-em-la-menor.json",
+   "duration": 64.25,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 11,
+   "counts": {
+    "acordes": 116,
+    "facil": 78,
+    "medio": 125,
+    "dificil": 165
+   }
+  },
+  {
+   "id": "mutopia-musette-em-re",
+   "title": "Musette in D",
+   "file": "mutopia-musette-em-re.json",
+   "duration": 20.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 12,
+   "counts": {
+    "acordes": 84,
+    "facil": 51,
+    "medio": 109,
+    "dificil": 171
+   }
+  },
+  {
+   "id": "mutopia-minueto-em-si-bemol",
+   "title": "Minuet in B-flat",
+   "file": "mutopia-minueto-em-si-bemol.json",
+   "duration": 78.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 13,
+   "counts": {
+    "acordes": 104,
+    "facil": 86,
+    "medio": 170,
+    "dificil": 225
+   }
+  },
+  {
+   "id": "mutopia-polonaise-em-fa",
+   "title": "Polonaise in F",
+   "file": "mutopia-polonaise-em-fa.json",
+   "duration": 48.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 14,
+   "counts": {
+    "acordes": 68,
+    "facil": 51,
+    "medio": 168,
+    "dificil": 235
+   }
+  },
+  {
+   "id": "mutopia-preludio-em-do",
+   "title": "Prelude in C",
+   "file": "mutopia-preludio-em-do.json",
+   "duration": 140.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 15,
+   "counts": {
+    "acordes": 140,
+    "medio": 468,
+    "dificil": 549
+   }
+  },
+  {
+   "id": "mutopia-cancao-de-embalar",
+   "title": "Lullaby (Wiegenlied)",
+   "file": "mutopia-cancao-de-embalar.json",
+   "duration": 40.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "F. Schubert · Mutopia Project (public domain)",
+   "order": 16,
+   "counts": {
+    "acordes": 40,
+    "facil": 31,
+    "medio": 74,
+    "dificil": 221
+   }
+  },
+  {
+   "id": "mutopia-estudo-melodico-n-o-1",
+   "title": "Melodic Study No. 1",
+   "file": "mutopia-estudo-melodico-n-o-1.json",
+   "duration": 55.14,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "C. Czerny · Mutopia Project (public domain)",
+   "order": 17,
+   "counts": {
+    "acordes": 132,
+    "facil": 118,
+    "medio": 207,
+    "dificil": 450
+   }
+  },
+  {
+   "id": "mutopia-estudo-melodico-n-o-2",
+   "title": "Melodic Study No. 2",
+   "file": "mutopia-estudo-melodico-n-o-2.json",
+   "duration": 49.06,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "C. Czerny · Mutopia Project (public domain)",
+   "order": 18,
+   "counts": {
+    "acordes": 128,
+    "facil": 94,
+    "medio": 253,
+    "dificil": 498
+   }
+  },
+  {
+   "id": "mutopia-estudo-melodico-n-o-3",
+   "title": "Melodic Study No. 3",
+   "file": "mutopia-estudo-melodico-n-o-3.json",
+   "duration": 55.88,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "C. Czerny · Mutopia Project (public domain)",
+   "order": 19,
+   "counts": {
+    "acordes": 192,
+    "facil": 129,
+    "medio": 246,
+    "dificil": 410
+   }
+  },
+  {
+   "id": "mutopia-fur-elise",
+   "title": "Für Elise",
+   "file": "mutopia-fur-elise.json",
+   "duration": 130.92,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "L. v. Beethoven · Mutopia Project (public domain)",
+   "order": 20,
+   "counts": {
+    "acordes": 420,
+    "facil": 350,
+    "medio": 591,
+    "dificil": 905
+   }
+  },
+  {
+   "id": "mutopia-preludio-em-la-maior",
+   "title": "Prelude in A major",
+   "file": "mutopia-preludio-em-la-maior.json",
+   "duration": 24.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "F. Chopin · Mutopia Project (public domain)",
+   "order": 21,
+   "counts": {
+    "acordes": 68,
+    "facil": 41,
+    "medio": 68,
+    "dificil": 168
+   }
+  },
+  {
+   "id": "mutopia-preludio-em-mi-menor",
+   "title": "Prelude in E minor",
+   "file": "mutopia-preludio-em-mi-menor.json",
+   "duration": 108.71,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "F. Chopin · Mutopia Project (public domain)",
+   "order": 22,
+   "counts": {
+    "acordes": 104,
+    "facil": 39,
+    "medio": 126,
+    "dificil": 600
+   }
+  },
+  {
+   "id": "mutopia-marcha-turca",
+   "title": "Turkish March",
+   "file": "mutopia-marcha-turca.json",
+   "duration": 255.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "W. A. Mozart · Mutopia Project (public domain)",
+   "order": 23,
+   "counts": {
+    "acordes": 512,
+    "facil": 213,
+    "medio": 840,
+    "dificil": 1614
+   }
+  }
+ ]
+}

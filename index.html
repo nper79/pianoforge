@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>pianoforge</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="pianoforge">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=Noto+Music&display=swap">
+<link rel="stylesheet" href="style.css?v=1792420802">
+</head>
+<body>
+
+<!-- 1. Quem toca -->
+<section id="scr-profiles" class="screen">
+  <header class="topnav"><div class="brand"><span class="mark"></span>pianoforge</div></header>
+  <div class="who-wrap">
+    <p class="eyebrow">Welcome</p>
+    <h1>Who is playing?</h1>
+    <div id="profile-list" class="profiles"></div>
+  </div>
+</section>
+
+<!-- 2. Biblioteca -->
+<section id="scr-library" class="screen hidden">
+  <header class="topnav">
+    <div class="brand"><span class="mark"></span>pianoforge</div>
+    <button id="who" class="who-chip"></button>
+  </header>
+
+  <section class="hero">
+    <div class="rain" aria-hidden="true"></div>
+    <p class="eyebrow">Library</p>
+    <h1 class="hero-t">What shall we play <em>today?</em></h1>
+    <div class="search">
+      <svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      <input id="yt-url" type="text" inputmode="search" placeholder="Search for a song or paste a YouTube link" autocomplete="off" spellcheck="false">
+      <button id="yt-go" class="btn primary go">Open</button>
+    </div>
+    <div class="hero-alt">
+      <span>Or add from</span>
+      <label class="link-btn">an audio file<input type="file" id="audio-file" accept="audio/*,.mp3,.m4a,.wav,.ogg" hidden></label>
+      <label class="link-btn">a photo of sheet music<input type="file" id="sheet-photo" accept="image/*" capture="environment" multiple hidden></label>
+      <label class="link-btn">a MIDI file<input type="file" id="midi-file" accept=".mid,.midi,.kar,audio/midi,audio/x-midi,audio/mid" hidden></label>
+    </div>
+    <div id="midi-dialog" class="midi-dialog hidden"></div>
+    <div id="jobs"></div>
+    <p id="hero-hint" class="hint"></p>
+  </section>
+
+  <div class="libhead">
+    <nav id="lib-tabs" class="tabs"></nav>
+    <div id="input-badge" class="badge"></div>
+  </div>
+  <div id="songs" class="songs"></div>
+</section>
+
+<!-- 3. Tocar -->
+<section id="scr-play" class="screen play hidden">
+  <aside class="rail">
+    <button id="back" class="rbtn" title="Back to the library"><i><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></i><span>Exit</span></button>
+    <button id="c-play" class="rbtn main" title="Play / pause (space)"><i><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z" class="fill"/></svg></i><span>Play</span></button>
+    <button id="c-restart" class="rbtn" title="Restart"><i><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></svg></i><span>Restart</span></button>
+    <button id="c-viewbtn" class="rbtn" title="Change view"><i><svg viewBox="0 0 24 24"><path d="M3 7h18M3 10h18M3 13h18M3 16h18"/></svg></i><span>View</span></button>
+    <button id="c-notation" class="rbtn" title="C D E · Do Re Mi · notation"><i>C</i><span>Notes</span></button>
+    <button id="c-full" class="rbtn" title="Full screen"><i><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></i><span>Screen</span></button>
+    <div class="rail-gap"></div>
+    <div class="hud">
+      <div><b id="h-score">0</b><small>points</small></div>
+      <div><b id="h-streak">0</b><small>streak</small></div>
+      <div><b id="h-acc">–</b><small>accuracy</small></div>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <div class="ptitle"><b id="p-title"></b><span id="p-level"></span></div>
+    <div id="chord-now" class="chord-now hidden"><small>Now</small><b></b><i></i></div>
+    <div class="pill">
+      <div class="seg" id="c-hands">
+        <button data-v="L" title="Left hand only">Left</button>
+        <button data-v="both" title="Both hands">Both</button>
+        <button data-v="R" title="Right hand only">Right</button>
+      </div>
+      <label class="speed" title="Speed"><span>Tempo</span><input id="c-speed" type="range" min="0.25" max="1.25" step="0.05"><b id="c-speed-v"></b></label>
+      <div class="seg hidden" id="c-src" title="Original: the recording behind you · Piano: just the notes, with piano sound">
+        <button data-v="original" title="The original recording, with vocals">Original</button>
+        <button data-v="novocal" id="c-novocal" title="The recording without vocals">No vocals</button>
+        <button data-v="piano">Piano</button>
+      </div>
+      <div class="seg" id="c-mode">
+        <button data-v="wait" title="The music waits for the right note">Wait</button>
+        <button data-v="rhythm" title="The music never stops">Rhythm</button>
+      </div>
+      <button id="c-more" class="chev" title="More options">⌄</button>
+    </div>
+  </header>
+
+  <div id="more" class="more hidden">
+    <div class="seg" id="c-view">
+      <button data-v="staff">Staff</button>
+      <button data-v="fall">Falling notes</button>
+    </div>
+    <label class="vol" id="music-row" title="Backing music volume">Music <input id="c-music" type="range" min="0" max="1" step="0.05"></label>
+    <label class="vol" title="If you use Bluetooth headphones and the sound lags, raise this">Audio delay <input id="c-lat" type="range" min="0" max="400" step="10"><b id="c-lat-v"></b></label>
+    <button id="c-midi" class="btn" title="Download this level as a MIDI file">Download MIDI</button>
+    <button id="c-accomp" class="btn toggle" title="The app plays the rest of the piece softly while you play your part">Accompaniment</button>
+    <button id="c-color" class="btn toggle" title="Colour by finger (1 thumb … 5 little finger) or by note">Colour by finger</button>
+    <button id="c-guide" class="btn toggle" title="The piano plays your part softly so you can hear it">Guide</button>
+    <button id="c-sound" class="btn toggle" title="Hear the other hand">Hear other hand</button>
+    <button id="c-hints" class="btn toggle" title="Easy levels: light up the next keys and show the chords">Hints</button>
+    <button id="c-names" class="btn toggle" title="Show note names">Note names</button>
+    <button id="c-metro" class="btn toggle" title="Metronome">Metronome</button>
+    <button id="c-mic" class="btn" title="Use the microphone (piano without cable)">Microphone</button>
+    <span class="sep"></span>
+    <button id="c-a" class="btn" title="Start of the loop">A</button>
+    <button id="c-b" class="btn" title="End of the loop">B</button>
+    <button id="c-loop" class="btn toggle" title="Loop A–B">Loop A–B</button>
+  </div>
+
+  <div class="stage">
+    <canvas id="cv"></canvas>
+    <div class="rotate-hint">Turn your phone sideways for a better view</div>
+    <div id="overlay" class="overlay hidden"></div>
+  </div>
+
+  <footer class="progress-wrap">
+    <button id="c-back5" class="pbtn" title="Back 5 seconds (←)">−5s</button>
+    <span id="t-cur" class="tlabel">0:00</span>
+    <div id="progress" class="progress" title="Drag to move through the song"><canvas id="prog-map"></canvas><div id="prog-fill"></div><div id="prog-loop"></div><div id="prog-head"></div></div>
+    <span id="t-end" class="tlabel">0:00</span>
+    <button id="c-fwd5" class="pbtn" title="Forward 5 seconds (→)">+5s</button>
+  </footer>
+</section>
+
+<div id="toast" class="toast hidden"></div>
+<script src="config.js?v=1792420802"></script>
+<script src="midi.js?v=1792420802"></script>
+<script src="app.js?v=1792420802"></script>
+</body>
+</html>
