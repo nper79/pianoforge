@@ -10,12 +10,16 @@
    "kind": "piano",
    "credit": "Traditional · 8notes.com · piano duet adapted for solo practice",
    "order": 0,
-   "preferred_level": "facil",
+   "preferred_level": "melodia",
    "counts": {
     "acordes": 64,
     "facil": 54,
     "medio": 77,
-    "dificil": 106
+    "dificil": 106,
+    "melodia": 54
+   },
+   "exercise_names": {
+    "melodia": "Só melodia · acompanhamento automático"
    }
   },
   {
