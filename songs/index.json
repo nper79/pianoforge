@@ -1,6 +1,24 @@
 {
  "songs": [
   {
+   "id": "8notes-we-wish-you-a-merry-christmas",
+   "title": "We Wish You a Merry Christmas",
+   "file": "8notes-we-wish-you-a-merry-christmas.json",
+   "duration": 30.3,
+   "builtin": false,
+   "added": 1793540466,
+   "kind": "piano",
+   "credit": "Traditional · 8notes.com · piano duet adapted for solo practice",
+   "order": 0,
+   "preferred_level": "facil",
+   "counts": {
+    "acordes": 64,
+    "facil": 54,
+    "medio": 77,
+    "dificil": 106
+   }
+  },
+  {
    "id": "two-little-chords-415106",
    "title": "Two Little Chords",
    "file": "two-little-chords-415106.json",
@@ -113,7 +131,7 @@
    "id": "brilha-brilha-estrelinha",
    "title": "Twinkle, Twinkle, Little Star",
    "file": "brilha-brilha-estrelinha.json",
-   "duration": 31.0,
+   "duration": 31,
    "builtin": true,
    "added": 0,
    "kind": "piano",
