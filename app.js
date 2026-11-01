@@ -2,7 +2,7 @@
    Entrada: piano por Web MIDI (cabo USB), microfone (deteção de altura), teclado do computador ou toque no ecrã. */
 'use strict';
 const $ = s => document.querySelector(s);
-const LEVELS = { licao: 'Chord lesson', acordes: 'Chords', facil: 'Beginner', medio: 'Intermediate', dificil: 'Advanced', completo: 'Full', arr: 'AI arranged', ia: 'AI test' };
+const LEVELS = { melodia: 'Só melodia', licao: 'Chord lesson', acordes: 'Chords', facil: 'Beginner', medio: 'Intermediate', dificil: 'Advanced', completo: 'Full', arr: 'AI arranged', ia: 'AI test' };
 const LEVEL_ORDER = Object.keys(LEVELS);
 const LETTERS = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
 const SOLFA = ['Do', 'Do♯', 'Re', 'Re♯', 'Mi', 'Fa', 'Fa♯', 'Sol', 'Sol♯', 'La', 'La♯', 'Si'];
@@ -672,7 +672,7 @@ function prepare() {
   P.beatLen = bt.length > 2 ? bt.slice(1).map((b, i) => b - bt[i]).sort((a, b) => a - b)[bt.length >> 1] : 60 / (P.song.bpm || 100);
   P.accomp = [];
   const full = (P.song.levels.dificil || {}).notes || [];
-  if (!['dificil', 'completo', 'arr', 'ia'].includes(P.level) && full.length) { // o Completo e o Teste IA já são o arranjo inteiro
+  if (!lv.accomp && !['dificil', 'completo', 'arr', 'ia'].includes(P.level) && full.length) { // o Completo e o Teste IA já são o arranjo inteiro
     let base = full;
     if (P.level !== 'acordes') { // quem toca a melodia és tu: tira-se a linha de cima da mão direita
       const top = new Map();
@@ -684,8 +684,9 @@ function prepare() {
     const dup = n => [-1, 0, 1].some(o => mine.get(Math.round(n.t * 20) + o)?.has(pc(n.m)));
     P.accomp = base.filter(n => !dup(n)).map(n => ({ t: n.t, d: n.d, m: n.m, v: n.v, sch: false }));
   }
-  if (P.song.accomp && P.song.accomp.length) { // dueto: a parte do professor toca sempre, em todos os níveis
-    P.accomp = (P.accomp || []).concat(P.song.accomp.map(n => ({ t: n.t, d: n.d, m: n.m, v: n.v ?? 60, sch: false })));
+  const accompaniment = lv.accomp ?? P.song.accomp;
+  if (accompaniment?.length) {
+    P.accomp = (P.accomp || []).concat(accompaniment.map(n => ({ t: n.t, d: n.d, m: n.m, v: n.v ?? 60, sch: false })));
   }
   P.levelScale = LEVEL_BEAT[P.level] ? Math.min(1, P.beatLen / LEVEL_BEAT[P.level]) : 1;
   const byT = new Map(); // acordes: notas da mesma mão ao mesmo tempo a uma terceira ou menos ficam mais finas
