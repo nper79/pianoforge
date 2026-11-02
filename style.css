@@ -330,3 +330,9 @@ h2 { font-size: 17px; font-weight: 600; margin: 0 0 12px; }
   background: #f2f7ff; border-color: #bcd2f5; text-align: left; }
 .btn.warm b { font-size: 17px; color: #1f4fa8; } .btn.warm small { font-size: 13px; color: #5a6f93; }
 .btn.warm:hover { border-color: #2f6fd6; }
+
+.midi-connection { display:flex; align-items:center; justify-content:flex-end; gap:10px; flex-wrap:wrap; }
+.midi-connect { white-space:nowrap; }
+.midi-connect.on { color:#176b37; border-color:#3fb26a; background:#edf9f1; }
+.midi-connect:disabled { cursor:wait; opacity:.65; }
+#midi-status { font-size:11px; color:var(--mute); line-height:1.35; }
