@@ -980,6 +980,7 @@ function syncControls() {
   $('#c-accomp').classList.toggle('hidden', !P.accomp || !P.accomp.length);
   $('#c-color').classList.toggle('on', s.colorBy !== 'note'); $('#c-color').textContent = s.colorBy === 'note' ? 'Colour by note' : 'Colour by finger'; $('#c-music').value = s.music ?? 0.8;
   $('#c-more').classList.toggle('on', !$('#more').classList.contains('hidden'));
+  $('#c-more').setAttribute('aria-expanded', String(!$('#more').classList.contains('hidden')));
 }
 
 // notas tocadas pelo jogador
