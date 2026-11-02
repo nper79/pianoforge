@@ -80,10 +80,11 @@
   </aside>
 
   <header class="topbar">
-    <div class="ptitle"><b id="p-title"></b><span id="p-level"></span><span id="midi-status" role="status" aria-live="polite"></span></div>
+    <div class="ptitle"><b id="p-title"></b><span id="p-level"></span><span id="midi-status" role="status" aria-live="polite"></span><span id="voice-restart-status" class="hidden" role="status" aria-live="polite"></span></div>
     <div id="chord-now" class="chord-now hidden"><small>Now</small><b></b><i></i></div>
     <div class="pill">
       <button id="c-connect-midi" class="btn midi-connect" type="button">Ligar MIDI</button>
+      <button id="c-voice-restart" class="btn toggle" type="button" aria-pressed="false">Voice restart</button>
       <div class="seg" id="c-hands">
         <button data-v="L" title="Left hand only">Left</button>
         <button data-v="both" title="Both hands">Both</button>
@@ -143,6 +144,7 @@
 <div id="toast" class="toast hidden"></div>
 <script src="config.js?v=1792420802"></script>
 <script src="midi.js?v=1792420802"></script>
-<script src="app.js?v=midi20261102"></script>
+<script src="voice-commands.js?v=1"></script>
+<script src="app.js?v=voice20261102"></script>
 </body>
 </html>
