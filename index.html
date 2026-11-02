@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="pianoforge">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=Noto+Music&display=swap">
-<link rel="stylesheet" href="style.css?v=midi20261102">
+<link rel="stylesheet" href="style.css?v=compact20261102">
 </head>
 <body>
 
@@ -80,31 +80,38 @@
   </aside>
 
   <header class="topbar">
-    <div class="ptitle"><b id="p-title"></b><span id="p-level"></span><span id="midi-status" role="status" aria-live="polite"></span><span id="voice-restart-status" class="hidden" role="status" aria-live="polite"></span></div>
+    <div class="ptitle"><b id="p-title"></b><span id="p-level"></span></div>
     <div id="chord-now" class="chord-now hidden"><small>Now</small><b></b><i></i></div>
     <div class="pill">
-      <button id="c-connect-midi" class="btn midi-connect" type="button">Ligar MIDI</button>
-      <button id="c-voice-restart" class="btn toggle" type="button" aria-pressed="false">Voice restart</button>
-      <div class="seg" id="c-hands">
-        <button data-v="L" title="Left hand only">Left</button>
-        <button data-v="both" title="Both hands">Both</button>
-        <button data-v="R" title="Right hand only">Right</button>
-      </div>
+      
+      
+      
       <label class="speed" title="Speed"><span>Tempo</span><input id="c-speed" type="range" min="0.25" max="1.25" step="0.05"><b id="c-speed-v"></b></label>
-      <div class="seg hidden" id="c-src" title="Original: the recording behind you · Piano: just the notes, with piano sound">
-        <button data-v="original" title="The original recording, with vocals">Original</button>
-        <button data-v="novocal" id="c-novocal" title="The recording without vocals">No vocals</button>
-        <button data-v="piano">Piano</button>
-      </div>
+      
       <div class="seg" id="c-mode">
         <button data-v="wait" title="The music waits for the right note">Wait</button>
         <button data-v="rhythm" title="The music never stops">Rhythm</button>
       </div>
-      <button id="c-more" class="chev" title="More options">⌄</button>
+      <button id="c-more" class="chev" title="More options · MIDI, voice, hands and volume" aria-label="More options" aria-controls="more" aria-expanded="false">⋯</button>
     </div>
   </header>
 
   <div id="more" class="more hidden">
+<button id="c-connect-midi" class="btn midi-connect" type="button">Ligar MIDI</button>
+<button id="c-voice-restart" class="btn toggle" type="button" aria-pressed="false">Voice restart</button>
+<span id="midi-status" class="option-status" role="status" aria-live="polite"></span>
+<span id="voice-restart-status" class="option-status hidden" role="status" aria-live="polite"></span>
+<div class="seg" id="c-hands">
+        <button data-v="L" title="Left hand only">Left</button>
+        <button data-v="both" title="Both hands">Both</button>
+        <button data-v="R" title="Right hand only">Right</button>
+      </div>
+<div class="seg hidden" id="c-src" title="Original: the recording behind you · Piano: just the notes, with piano sound">
+        <button data-v="original" title="The original recording, with vocals">Original</button>
+        <button data-v="novocal" id="c-novocal" title="The recording without vocals">No vocals</button>
+        <button data-v="piano">Piano</button>
+      </div>
+<span class="sep"></span>
     <div class="seg" id="c-view">
       <button data-v="staff">Staff</button>
       <button data-v="fall">Falling notes</button>
@@ -145,6 +152,6 @@
 <script src="config.js?v=1792420802"></script>
 <script src="midi.js?v=1792420802"></script>
 <script src="voice-commands.js?v=1"></script>
-<script src="app.js?v=voice20261102"></script>
+<script src="app.js?v=compact20261102"></script>
 </body>
 </html>
