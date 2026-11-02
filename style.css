@@ -336,3 +336,39 @@ h2 { font-size: 17px; font-weight: 600; margin: 0 0 12px; }
 .midi-connect.on { color:#176b37; border-color:#3fb26a; background:#edf9f1; }
 .midi-connect:disabled { cursor:wait; opacity:.65; }
 #midi-status { font-size:11px; color:var(--mute); line-height:1.35; }
+
+/* Keep the score visible: secondary controls open over it instead of growing the header. */
+.more .option-status { flex-basis: 100%; font-size: 12px; line-height: 1.4; color: var(--mute); }
+.more #c-src { flex-wrap: wrap; }
+.more { max-height: calc(100dvh - var(--toolbar-height, 64px) - 60px); overflow-y: auto; overscroll-behavior: contain; }
+@media (max-width: 1000px), (max-height: 650px) {
+  .play .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 8px; padding: 5px 10px; }
+  .play .play-heading { grid-column: 1 / -1; display: flex; flex-wrap: nowrap; gap: 10px; }
+  .play .play-heading .ptitle { display: flex; flex: 1; min-width: 0; }
+  .play .ptitle b { font-size: 18px; }
+  .play .ptitle span { display: none; }
+  .play .player-pickers { width: auto; max-width: 46%; flex: 0 1 230px; gap: 6px; }
+  .play .player-pickers .level-picker { width: auto; flex: 1; min-width: 0; }
+  .play .player-pickers #version-picker { flex: 0 1 80px; }
+  .play .player-pickers .level-picker > span { display: none; }
+  .play .player-pickers select { font-size: 12px; padding: 4px 22px 4px 8px; }
+  .play #chord-now { grid-column: 1; grid-row: 2; justify-self: start; padding: 2px 9px; gap: 6px; }
+  .play #chord-now b { font-size: 20px; min-width: 1em; }
+  .play #chord-now small { display: none; }
+  .play #chord-now i { font-size: 11px; }
+  .play .topbar > .pill { grid-column: 2; grid-row: 2; display: flex; flex-wrap: nowrap; overflow: visible; gap: 5px; margin-left: 0; }
+  .play .pill .speed { padding: 0; gap: 4px; }
+  .play .pill .speed span { display: none; }
+  .play .pill .speed input { width: 72px; }
+  .play .pill .speed b { min-width: 34px; font-size: 11px; }
+  .play .pill .seg button { padding: 4px 7px; font-size: 12px; }
+  .play .pill .chev { width: 30px; height: 28px; }
+  .play .more { top: calc(var(--toolbar-height, 70px) + 4px); bottom: auto; left: auto; right: 8px;
+    max-width: calc(100% - 74px); max-height: calc(100dvh - var(--toolbar-height, 70px) - 50px); padding: 10px; }
+}
+@media (max-width: 480px) {
+  .play #chord-now { display: none; }
+  .play .topbar > .pill { grid-column: 1 / -1; justify-content: flex-end; }
+  .play .pill .speed input { width: 60px; }
+  .play .ptitle b { font-size: 16px; }
+}
