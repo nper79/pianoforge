@@ -487,29 +487,71 @@ function click(strong) {
 
 // ---------- entrada: MIDI, teclado, toque, microfone ----------
 let inputName = '';
+let midiAccess = null, midiConnecting = false, midiError = '';
+const midiHeld = new Set();
+function midiStatus() {
+  if (midiConnecting) return 'A ligar ao piano…';
+  if (midiError) return midiError;
+  if (inputName) return 'Piano ligado: ' + inputName;
+  if (!navigator.requestMIDIAccess) return 'MIDI indisponível neste browser. Abre o site no Chrome ou Edge.';
+  return midiAccess ? 'Liga o piano por USB. À espera de um dispositivo MIDI.' : 'Liga o piano por USB e carrega em Ligar MIDI.';
+}
 function setBadge() {
   const b = $('#input-badge');
   if (mic.on) { b.textContent = 'Listening through the microphone'; b.className = 'badge on'; }
   else if (inputName) { b.textContent = 'Piano connected: ' + inputName; b.className = 'badge on'; }
-  else { b.textContent = 'Connect a piano via USB, or use the microphone or keyboard (A S D F…)'; b.className = 'badge'; }
+  else { b.textContent = midiStatus(); b.className = 'badge'; }
+  const status = $('#midi-status');
+  if (status) status.textContent = midiStatus();
+  for (const id of ['#connect-midi', '#c-connect-midi']) {
+    const button = $(id);
+    if (!button) continue;
+    button.textContent = midiConnecting ? 'A ligar…' : inputName ? 'MIDI ligado' : 'Ligar MIDI';
+    button.disabled = midiConnecting;
+    button.classList.toggle('on', !!inputName);
+    button.title = midiStatus();
+  }
   $('#c-mic').classList.toggle('on', mic.on);
 }
-if (navigator.requestMIDIAccess) {
-  navigator.requestMIDIAccess().then(acc => {
-    const bind = () => {
-      const names = [];
-      acc.inputs.forEach(inp => { inp.onmidimessage = onMidi; names.push(inp.name); });
-      const had = inputName; inputName = names.join(', ');
-      if (inputName && inputName !== had) toast('Piano connected: ' + inputName);
-      setBadge();
-    };
-    bind(); acc.onstatechange = bind;
-  }).catch(() => setBadge());
-} else setBadge();
+function bindMidi() {
+  const names = [];
+  midiAccess.inputs.forEach(inp => {
+    inp.onmidimessage = inp.state === 'disconnected' ? null : onMidi;
+    if (inp.state !== 'disconnected') names.push(inp.name || 'Piano MIDI');
+  });
+  const had = inputName; inputName = names.join(', ');
+  if (had !== inputName) {
+    for (const m of midiHeld) noteOff(m);
+    midiHeld.clear();
+    if (inputName) toast('Piano ligado: ' + inputName);
+  }
+  setBadge();
+}
+async function connectMidi() {
+  if (midiConnecting) return;
+  midiError = '';
+  if (!navigator.requestMIDIAccess) { setBadge(); toast(midiStatus(), 6500); return; }
+  midiConnecting = true; setBadge();
+  try {
+    // A button press requests only normal MIDI notes; no SysEx/device configuration access.
+    midiAccess = midiAccess || await navigator.requestMIDIAccess({ sysex: false });
+    midiAccess.onstatechange = bindMidi;
+    bindMidi();
+  } catch (e) {
+    midiError = e.name === 'NotAllowedError' || e.name === 'SecurityError'
+      ? 'MIDI bloqueado. Permite o acesso MIDI nas definições deste site e tenta novamente.'
+      : 'Não foi possível ligar o MIDI. Verifica o cabo USB e tenta novamente.';
+    toast(midiError, 6500);
+  } finally { midiConnecting = false; setBadge(); }
+}
+for (const id of ['#connect-midi', '#c-connect-midi']) {
+  const button = $(id); if (button) button.onclick = connectMidi;
+}
 function onMidi(e) {
+  if (!e.data || e.data.length < 3) return;
   const [st, d1, d2] = e.data, c = st & 0xf0;
-  if (c === 0x90 && d2 > 0) noteOn(d1, 'midi');
-  else if (c === 0x80 || (c === 0x90 && d2 === 0)) noteOff(d1);
+  if (c === 0x90 && d2 > 0) { midiHeld.add(d1); noteOn(d1, 'midi'); }
+  else if (c === 0x80 || (c === 0x90 && d2 === 0)) { midiHeld.delete(d1); noteOff(d1); }
 }
 const KEYMAP = { KeyA: 0, KeyW: 1, KeyS: 2, KeyE: 3, KeyD: 4, KeyF: 5, KeyT: 6, KeyG: 7, KeyY: 8, KeyH: 9, KeyU: 10, KeyJ: 11,
   KeyK: 12, KeyO: 13, KeyL: 14, KeyP: 15, Semicolon: 16, Quote: 17 };
@@ -1341,13 +1383,13 @@ function drawStaff(now, bottom, cur, pulse) {
     const w = Math.max(nt.d * pps - 3 * DPR, H1 * 1.5), xb = xa + w; if (xb < clefW) continue;
     const d = dia(nt.m), st = staffOf(nt), yc = yS(st, d), act = active(nt);
     ledgers(xa - s * 0.45, s * 1.6, d, st, yS, ink);
-    ctx.globalAlpha = nt.miss ? 0.25 : nt.hit ? 0.35 : 1;
-    rr(xa, yc - h / 2, w, h, h / 2); ctx.fillStyle = act ? colOf(nt) : '#d4d4cf'; ctx.fill();
+    ctx.globalAlpha = nt.hit ? 1 : nt.miss ? 0.25 : 1;
+    rr(xa, yc - h / 2, w, h, h / 2); ctx.fillStyle = nt.hit ? COL.good : act ? colOf(nt) : '#d4d4cf'; ctx.fill();
     if (nt.stk) { ctx.lineWidth = 1.5 * DPR; ctx.strokeStyle = '#fff'; ctx.stroke(); }
     if (cur && cur.notes.includes(nt) && !nt.hit) { ctx.lineWidth = (2 + 2.5 * pulse) * DPR; ctx.strokeStyle = ink; ctx.stroke(); }
     if (P.settings.names) {
-      ctx.globalAlpha = nt.miss ? 0.35 : nt.hit ? 0.5 : 1;
-      ctx.fillStyle = act ? inkOn(colOf(nt)) : ink;
+      ctx.globalAlpha = nt.hit ? 1 : nt.miss ? 0.35 : 1;
+      ctx.fillStyle = nt.hit ? '#fff' : act ? inkOn(colOf(nt)) : ink;
       ctx.fillText(noteName(nt.m), xa + h * 0.45, yc + DPR);
     }
     ctx.globalAlpha = 1;
@@ -1397,7 +1439,7 @@ function drawClassic(X, yS, s, clefW, cur, pulse, ink) {
     ctx.globalAlpha = miss ? 0.3 : 1;
     // linha suave com a duração (ajuda a saber quanto tempo segurar)
     for (const n of g.notes) {
-      ctx.fillStyle = act ? colOf(n) : '#e2e2dd'; ctx.globalAlpha = (miss ? 0.15 : 0.35);
+      ctx.fillStyle = n.hit ? COL.good : act ? colOf(n) : '#e2e2dd'; ctx.globalAlpha = n.hit ? 0.75 : (miss ? 0.15 : 0.35);
       rr(cx, y(dia(n.m)) - s * 0.14, Math.max(0, n.d * pps - rx), s * 0.28, s * 0.14); ctx.fill();
     }
     ctx.globalAlpha = miss ? 0.3 : 1;
@@ -1409,11 +1451,12 @@ function drawClassic(X, yS, s, clefW, cur, pulse, ink) {
       const d = dia(n.m), yc = y(d), open = n.d >= beat * 1.75;
       ledgers(cx - rx * 1.6, rx * 3.2, d, g.staff, yS, ink);
       ctx.beginPath(); ctx.ellipse(cx, yc, rx, ry, -0.35, 0, 7);
-      ctx.fillStyle = col; ctx.strokeStyle = col;
+      const noteInk = n.hit ? COL.good : col;
+      ctx.fillStyle = noteInk; ctx.strokeStyle = noteInk;
       if (open) { ctx.lineWidth = Math.max(1.5, s * 0.16); ctx.stroke(); } else ctx.fill();
-      if (isBlack(n.m)) { ctx.fillStyle = col; ctx.font = `${s * 1.5}px "Noto Music", serif`; ctx.fillText('\u266F', cx - rx * 2.7, yc); }
+      if (isBlack(n.m)) { ctx.fillStyle = noteInk; ctx.font = `${s * 1.5}px "Noto Music", serif`; ctx.fillText('\u266F', cx - rx * 2.7, yc); }
       if (P.settings.names && act) {
-        ctx.fillStyle = colOf(n); ctx.font = `600 ${Math.min(14 * DPR, s * 0.75)}px 'Schibsted Grotesk', sans-serif`;
+        ctx.fillStyle = n.hit ? COL.good : colOf(n); ctx.font = `600 ${Math.min(14 * DPR, s * 0.75)}px 'Schibsted Grotesk', sans-serif`;
         ctx.fillText(noteName(n.m), cx + rx * 1.35, yc - s * 0.55);
       }
     }
@@ -1494,7 +1537,7 @@ function drawFalling(now, hitY, cur, pulse) {
     const pad = k.black ? 1 * DPR : 3 * DPR, x = k.x + pad, w = k.w - 2 * pad;
     const act = active(n);
     let col = act ? COL[n.h] || COL.R : COL.auto;
-    ctx.globalAlpha = n.miss ? 0.3 : (n.hit ? 0.55 : 1);
+    ctx.globalAlpha = n.hit ? 1 : n.miss ? 0.3 : 1;
     if (n.hit) col = COL.good;
     rr(x, y, w, h, 7 * DPR); ctx.fillStyle = col; ctx.fill();
     if (cur && cur.notes.includes(n) && !n.hit) {
@@ -1650,6 +1693,13 @@ cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
 
 // ---------- arranque ----------
 renderProfiles(); detectApi(); setBadge();
+// Reconnect quietly only when this origin already has MIDI permission.
+if (navigator.requestMIDIAccess && navigator.permissions?.query) {
+  navigator.permissions.query({ name: 'midi', sysex: false }).then(p => {
+    if (p.state === 'granted') connectMidi();
+  }).catch(() => {});
+}
+
 const last = profiles.find(p => p.id === store.get('last'));
 if (last) choose(last); else show('scr-profiles');
 requestAnimationFrame(frame);
