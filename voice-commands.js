@@ -1,6 +1,6 @@
 /* Optional, session-only voice control. Enable with a click; never request the microphone on load. */
 'use strict';
-function createVoiceRestart({ button, status, onRestart, isSongOpen,
+function createVoiceRestart({ button, status, onRestart, isSongOpen, onEnable = () => {},
   Recognition = window.SpeechRecognition || window.webkitSpeechRecognition }) {
   let enabled = false, recognition = null, timer = null, lastRestart = -Infinity, failures = 0;
   const say = text => { status.textContent = text; status.classList.toggle('hidden', !text); };
@@ -72,6 +72,7 @@ function createVoiceRestart({ button, status, onRestart, isSongOpen,
   function start() {
     if (enabled || !isSongOpen()) return;
     if (!Recognition) { stop('Voice recognition is unavailable in this browser. Try Chrome or Edge.'); return; }
+    onEnable(); // Speech commands and microphone pitch detection must never run together.
     enabled = true; failures = 0; lastRestart = -Infinity;
     show('Voice: starting…', 'Allow the microphone, then say “restart”.');
     listen();
