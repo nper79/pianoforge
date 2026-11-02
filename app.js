@@ -868,7 +868,7 @@ function stopVoices() {
   for (const n of P.accomp || []) if (n.t > P.t) n.sch = false; P.voices.forEach(v => releaseTone(v)); P.voices.clear(); }
 
 // botões
-$('#back').onclick = () => { P.state = 'idle'; stopVoices(); bgStop(); $('#more').classList.add('hidden'); show('scr-library'); renderLibrary(); };
+$('#back').onclick = () => { voiceRestart.stop(); P.state = 'idle'; stopVoices(); bgStop(); $('#more').classList.add('hidden'); show('scr-library'); renderLibrary(); };
 $('#c-play').onclick = togglePlay;
 $('#c-restart').onclick = () => restart(true);
 function segInit(id, key, after) {
@@ -1692,6 +1692,16 @@ const up = e => { if (touches.has(e.pointerId)) { noteOff(touches.get(e.pointerI
 cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
 
 // ---------- arranque ----------
+const voiceRestart = typeof createVoiceRestart === 'function' && $('#c-voice-restart') ? createVoiceRestart({
+  button: $('#c-voice-restart'), status: $('#voice-restart-status'),
+  isSongOpen: () => !!P.song && !$('#scr-play').classList.contains('hidden'),
+  onRestart: () => {
+    if (P.warm) endWarm(false);
+    P.A = P.B = null; P.loop = false;
+    bgStop(); restart(true); syncControls();
+    toast('Restarting song.');
+  },
+}) : { stop() {} };
 renderProfiles(); detectApi(); setBadge();
 // Reconnect quietly only when this origin already has MIDI permission.
 if (navigator.requestMIDIAccess && navigator.permissions?.query) {
