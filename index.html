@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="pianoforge">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=Noto+Music&display=swap">
-<link rel="stylesheet" href="style.css?v=1792420802">
+<link rel="stylesheet" href="style.css?v=midi20261102">
 </head>
 <body>
 
@@ -57,7 +57,7 @@
 
   <div class="libhead">
     <nav id="lib-tabs" class="tabs"></nav>
-    <div id="input-badge" class="badge"></div>
+    <div class="midi-connection"><button id="connect-midi" class="btn midi-connect" type="button">Ligar MIDI</button><div id="input-badge" class="badge" role="status" aria-live="polite"></div></div>
   </div>
   <div id="songs" class="songs"></div>
 </section>
@@ -80,9 +80,10 @@
   </aside>
 
   <header class="topbar">
-    <div class="ptitle"><b id="p-title"></b><span id="p-level"></span></div>
+    <div class="ptitle"><b id="p-title"></b><span id="p-level"></span><span id="midi-status" role="status" aria-live="polite"></span></div>
     <div id="chord-now" class="chord-now hidden"><small>Now</small><b></b><i></i></div>
     <div class="pill">
+      <button id="c-connect-midi" class="btn midi-connect" type="button">Ligar MIDI</button>
       <div class="seg" id="c-hands">
         <button data-v="L" title="Left hand only">Left</button>
         <button data-v="both" title="Both hands">Both</button>
@@ -142,6 +143,6 @@
 <div id="toast" class="toast hidden"></div>
 <script src="config.js?v=1792420802"></script>
 <script src="midi.js?v=1792420802"></script>
-<script src="app.js?v=melody20261101"></script>
+<script src="app.js?v=midi20261102"></script>
 </body>
 </html>
