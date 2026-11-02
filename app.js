@@ -498,7 +498,7 @@ function midiStatus() {
 }
 function setBadge() {
   const b = $('#input-badge');
-  if (mic.on) { b.textContent = 'Listening through the microphone'; b.className = 'badge on'; }
+  if (mic.on) { b.textContent = 'Piano microphone on · voice commands are off'; b.className = 'badge on'; }
   else if (inputName) { b.textContent = 'Piano connected: ' + inputName; b.className = 'badge on'; }
   else { b.textContent = midiStatus(); b.className = 'badge'; }
   const status = $('#midi-status');
@@ -511,7 +511,11 @@ function setBadge() {
     button.classList.toggle('on', !!inputName);
     button.title = midiStatus();
   }
-  $('#c-mic').classList.toggle('on', mic.on);
+  const micButton = $('#c-mic');
+  micButton.classList.toggle('on', mic.on);
+  micButton.setAttribute('aria-pressed', String(mic.on));
+  micButton.setAttribute('aria-busy', String(!!mic.pending));
+  micButton.textContent = mic.pending ? 'Piano mic: starting…' : mic.on ? 'Piano mic: on' : 'Piano mic: off';
 }
 function bindMidi() {
   const names = [];
@@ -570,25 +574,43 @@ addEventListener('keydown', e => {
 addEventListener('keyup', e => { if (kbDown.has(e.code)) { noteOff(kbDown.get(e.code)); kbDown.delete(e.code); } });
 
 // microfone: deteção de altura (YIN), uma nota de cada vez
-const mic = { on: false, an: null, buf: null, cur: null, cand: null, n: 0, lvl: 0, lastOn: 0, stream: null };
-async function toggleMic() {
-  if (mic.on) {
-    mic.stream?.getTracks().forEach(t => t.stop()); mic.on = false; if (mic.cur != null) noteOff(mic.cur); setBadge(); return;
-  }
-  try {
-    const a = audio();
-    mic.stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
-    const src = a.createMediaStreamSource(mic.stream);
-    mic.an = a.createAnalyser(); mic.an.fftSize = 2048; src.connect(mic.an);
-    mic.buf = new Float32Array(mic.an.fftSize); mic.on = true;
-    if (P.settings) { P.settings.sound = false; syncControls(); }
-    toast('Microphone on. Play one note at a time (Beginner works best for this).', 5000);
-  } catch (err) {
-    toast('Could not use the microphone: ' + (err.message || err), 5000);
-  }
+const mic = { on: false, pending: false, request: 0, an: null, source: null, buf: null, cur: null, cand: null, n: 0, lvl: 0, lastOn: 0, stream: null };
+function stopMic() {
+  mic.request++;
+  mic.pending = false; mic.on = false;
+  mic.stream?.getTracks().forEach(t => t.stop());
+  mic.source?.disconnect(); mic.an?.disconnect();
+  if (mic.cur != null) noteOff(mic.cur);
+  mic.stream = mic.source = mic.an = mic.buf = mic.cur = mic.cand = null;
+  mic.n = mic.lvl = mic.lastOn = 0; mic.att = false;
   setBadge();
 }
+async function toggleMic() {
+  if (mic.on || mic.pending) { stopMic(); return; }
+  voiceRestart.stop();
+  const request = ++mic.request;
+  mic.pending = true; setBadge();
+  try {
+    const a = audio();
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+    if (request !== mic.request) { stream.getTracks().forEach(t => t.stop()); return; }
+    mic.stream = stream;
+    mic.source = a.createMediaStreamSource(stream);
+    mic.an = a.createAnalyser(); mic.an.fftSize = 2048; mic.source.connect(mic.an);
+    mic.buf = new Float32Array(mic.an.fftSize); mic.on = true;
+    if (P.settings) { P.settings.sound = false; syncControls(); }
+    toast('Piano microphone on. For spoken commands, switch on Voice restart instead.', 5000);
+  } catch (err) {
+    if (request !== mic.request) return;
+    stopMic();
+    toast('Could not use the microphone: ' + (err.message || err), 5000);
+  } finally {
+    if (request === mic.request) { mic.pending = false; setBadge(); }
+  }
+}
 $('#c-mic').onclick = toggleMic;
+document.addEventListener('visibilitychange', () => { if (document.hidden) stopMic(); });
+addEventListener('pagehide', stopMic);
 function yin(buf, sr) {
   const N = buf.length >> 1, d = new Float32Array(N);
   const minT = Math.floor(sr / 1400), maxT = Math.min(N - 1, Math.floor(sr / 60));
@@ -868,7 +890,7 @@ function stopVoices() {
   for (const n of P.accomp || []) if (n.t > P.t) n.sch = false; P.voices.forEach(v => releaseTone(v)); P.voices.clear(); }
 
 // botões
-$('#back').onclick = () => { voiceRestart.stop(); P.state = 'idle'; stopVoices(); bgStop(); $('#more').classList.add('hidden'); show('scr-library'); renderLibrary(); };
+$('#back').onclick = () => { voiceRestart.stop(); stopMic(); P.state = 'idle'; stopVoices(); bgStop(); $('#more').classList.add('hidden'); show('scr-library'); renderLibrary(); };
 $('#c-play').onclick = togglePlay;
 $('#c-restart').onclick = () => restart(true);
 function segInit(id, key, after) {
@@ -986,6 +1008,7 @@ function syncControls() {
 // notas tocadas pelo jogador
 const match = (a, b) => a === b || (mic.on && ((a - b) % 12 === 0));
 function noteOn(m, src) {
+  if (src === 'mic' && !mic.on) return;
   const prev = P.pressed.get(m);
   if (prev?.v) releaseTone(prev.v);
   const rec = { at: performance.now(), ok: null };
@@ -1695,6 +1718,7 @@ cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
 // ---------- arranque ----------
 const voiceRestart = typeof createVoiceRestart === 'function' && $('#c-voice-restart') ? createVoiceRestart({
   button: $('#c-voice-restart'), status: $('#voice-restart-status'),
+  onEnable: stopMic,
   isSongOpen: () => !!P.song && !$('#scr-play').classList.contains('hidden'),
   onRestart: () => {
     if (P.warm) endWarm(false);
