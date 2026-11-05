@@ -1,6 +1,33 @@
 {
  "songs": [
   {
+   "id": "jingle-bells-pauta-foto",
+   "title": "Jingle Bells — pauta da foto",
+   "file": "jingle-bells-pauta-foto.json",
+   "duration": 20.2,
+   "bpm": 100,
+   "builtin": false,
+   "kind": "piano",
+   "added": 1793898414,
+   "credit": "J. L. Pierpont · pauta fornecida pelo utilizador · 8 compassos",
+   "order": 0,
+   "preferred_level": "melodia",
+   "exercise_names": {
+    "melodia": "Só melodia · acompanhamento automático",
+    "facil": "Melodia lenta · cinco teclas",
+    "medio": "Melodia + baixo",
+    "dificil": "Pauta da foto · duas mãos",
+    "acordes": "Acompanhamento · mão esquerda"
+   },
+   "counts": {
+    "melodia": 49,
+    "facil": 49,
+    "medio": 65,
+    "dificil": 81,
+    "acordes": 32
+   }
+  },
+  {
    "id": "8notes-we-wish-you-a-merry-christmas",
    "title": "We Wish You a Merry Christmas",
    "file": "8notes-we-wish-you-a-merry-christmas.json",
