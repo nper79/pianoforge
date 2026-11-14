@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produção de músicas · pianoforge</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css?v=27"><link rel="stylesheet" href="production.css?v=1">
+</head>
+<body class="production-page">
+  <main class="production-shell">
+    <header class="topnav"><a class="brand" href="/"><span class="mark"></span>pianoforge</a><a class="btn" href="/">Voltar à biblioteca</a></header>
+    <section class="production-intro">
+      <div><p class="eyebrow">Produção de músicas</p><h1>Da ideia <em>à música.</em></h1><p>Uma base musical, uma gravação e exercícios que preservam o tema.</p></div>
+      <button class="btn primary" id="new-job">Nova música <span aria-hidden="true">＋</span></button>
+    </section>
+    <p id="notice" role="status" aria-live="polite" class="production-notice hidden"></p>
+    <section class="production-workspace">
+      <aside class="production-list"><div class="list-heading"><h2>Em produção</h2><span id="job-count">0</span></div><div id="job-list"></div></aside>
+      <section id="job-detail" class="production-detail" aria-label="Trabalho selecionado"><div class="production-empty"><span class="empty-score" aria-hidden="true">♪</span><h2>O primeiro passo é um tema.</h2><p>Cria uma ficha e prepara o MIDI. Depois importa a gravação que a IA gerar a partir do guia.</p><button class="btn" id="empty-new">Criar uma música</button></div></section>
+    </section>
+  </main>
+  <dialog id="job-dialog">
+    <form id="job-form">
+      <div class="dialog-heading"><div><p class="eyebrow">Nova produção</p><h2>Começar pela ideia musical</h2></div><button type="button" class="btn" id="close-dialog" aria-label="Fechar">×</button></div>
+      <div class="form-grid">
+        <label class="full">Nome da música<input name="title" required maxlength="100" placeholder="Nome da nova música"></label>
+        <label>Estilo<input name="style" value="Pop" maxlength="300"></label>
+        <label>Nível pretendido<select name="level"><option value="iniciante">Iniciante</option><option value="intermedio">Intermédio</option><option value="avancado">Avançado</option></select></label>
+        <label>Andamento (BPM)<input name="bpm" type="number" value="100" min="40" max="180" required></label>
+        <label>Tonalidade e compasso<input value="Dó maior · 4/4" readonly></label>
+        <label class="full">O que queremos ensinar?<textarea name="skills" rows="2" maxlength="1200">Reconhecer e repetir motivos de três notas com a mão direita.</textarea></label>
+        <label class="full">Melodia · um compasso por linha<textarea name="melody" rows="8" class="melody-plan" spellcheck="false">C4:1 D4:1 E4:1 R:1
+D4:1 E4:1 G4:1 R:1
+E4:2 C4:2
+F4:1 E4:1 D4:1 R:1
+C4:1 D4:1 E4:1 R:1
+D4:1 E4:1 G4:1 R:1
+F4:2 E4:1 D4:1
+G4:2 C4:1 R:1</textarea></label>
+        <p class="field-help full">C4:1 = Dó4 durante um tempo. R:1 = uma pausa. Cada linha soma quatro tempos. Esta é uma base de exemplo editável; também podes importar o teu próprio MIDI depois.</p>
+        <label class="full">Acordes · um por compasso, separados por vírgulas<input name="chords" value="C, G, Am, F, C, G, F, C"></label>
+      </div>
+      <p id="form-error" role="alert" class="form-error"></p>
+      <div class="dialog-actions"><button type="button" class="btn" id="cancel-dialog">Cancelar</button><button type="submit" class="btn primary" id="create-job">Guardar e preparar guia</button></div>
+    </form>
+  </dialog>
+  <input type="file" id="production-upload" hidden>
+  <script src="production.js?v=1"></script>
+</body>
+</html>

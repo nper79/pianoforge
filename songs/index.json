@@ -1,0 +1,686 @@
+{
+ "songs": [
+  {
+   "id": "green-greens-PWJtT8",
+   "title": "Green Greens",
+   "file": "green-greens-PWJtT8.json",
+   "duration": 61.48,
+   "builtin": false,
+   "added": 1794656021,
+   "kind": "piano",
+   "audio": "green-greens-PWJtT8.backing.mp3",
+   "credit": "",
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 216,
+    "facil": 87,
+    "medio": 190,
+    "dificil": 397
+   }
+  },
+  {
+   "id": "jingle-bells-pauta-foto",
+   "title": "Jingle Bells — pauta da foto",
+   "file": "jingle-bells-pauta-foto.json",
+   "duration": 20.2,
+   "builtin": false,
+   "added": 1793898414,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. L. Pierpont · pauta fornecida pelo utilizador · 8 compassos",
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": "melodia",
+   "counts": {
+    "melodia": 49,
+    "facil": 49,
+    "medio": 65,
+    "dificil": 81,
+    "acordes": 32
+   }
+  },
+  {
+   "id": "8notes-we-wish-you-a-merry-christmas",
+   "title": "We Wish You a Merry Christmas",
+   "file": "8notes-we-wish-you-a-merry-christmas.json",
+   "duration": 30.3,
+   "builtin": false,
+   "added": 1793553098,
+   "kind": "piano",
+   "audio": null,
+   "credit": "Traditional · 8notes.com · piano duet adapted for solo practice",
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": "melodia",
+   "counts": {
+    "acordes": 64,
+    "facil": 54,
+    "medio": 77,
+    "dificil": 106,
+    "melodia": 54
+   }
+  },
+  {
+   "id": "lantern-road-arranjo-por-frases",
+   "title": "Lantern Road — arranjo por frases · 16 s",
+   "file": "lantern-road-arranjo-por-frases.json",
+   "duration": 16.0,
+   "builtin": false,
+   "added": 1792670159,
+   "kind": "banda",
+   "audio": "lantern-road-arranjo-por-frases.full.mp3",
+   "credit": "Arranjo elaborado nesta conversa · melodia transcrita pelo SheetSage2",
+   "order": 0,
+   "playalong": true,
+   "navigation": null,
+   "preferred_level": "basics",
+   "counts": {
+    "basics": 22,
+    "facil": 29,
+    "medio": 35,
+    "melodia": 40
+   }
+  },
+  {
+   "id": "lantern-road-chatmusician",
+   "title": "Lantern Road — ChatMusician · ensaio 16 s",
+   "file": "lantern-road-chatmusician.json",
+   "duration": 16.0,
+   "builtin": false,
+   "added": 1792669037,
+   "kind": "banda",
+   "audio": "lantern-road-chatmusician.full.mp3",
+   "credit": "ChatMusician · ensaio de adaptação; não validado para iniciantes",
+   "order": 0,
+   "playalong": true,
+   "navigation": null,
+   "preferred_level": "medio",
+   "counts": {
+    "melodia": 40,
+    "medio": 40,
+    "dificil": 40
+   }
+  },
+  {
+   "id": "lantern-road-sheetsage2",
+   "title": "Lantern Road — SheetSage2",
+   "file": "lantern-road-sheetsage2.json",
+   "duration": 137.64,
+   "builtin": false,
+   "added": 1792665679,
+   "kind": "banda",
+   "audio": "lantern-road-sheetsage2.full.mp3",
+   "credit": "SheetSage2 · transcrição experimental da gravação",
+   "order": 0,
+   "playalong": true,
+   "navigation": null,
+   "preferred_level": "dificil",
+   "counts": {
+    "melodia": 162,
+    "arr": 194,
+    "acordes": 289,
+    "completo": 645,
+    "facil": 87,
+    "medio": 420,
+    "dificil": 559
+   }
+  },
+  {
+   "id": "lantern-road-accomontage",
+   "title": "Lantern Road — AccoMontage test",
+   "file": "lantern-road-accomontage.json",
+   "duration": 64.0,
+   "builtin": false,
+   "added": 1792664395,
+   "kind": "banda",
+   "audio": "lantern-road-accomontage.full.mp3",
+   "credit": "Audio-derived melody + AccoMontage accompaniment · 64 s test",
+   "order": 0,
+   "playalong": true,
+   "navigation": null,
+   "preferred_level": "arr",
+   "counts": {
+    "arr": 871,
+    "acco": 686,
+    "melodia": 190
+   }
+  },
+  {
+   "id": "lantern-road-etude-levels",
+   "title": "Lantern Road — checked exercises + Etude advanced",
+   "file": "lantern-road-etude-levels.json",
+   "duration": 137.64,
+   "builtin": false,
+   "added": 1792661896,
+   "kind": "banda",
+   "audio": "lantern-road-etude-levels.full.mp3",
+   "credit": "Checked beginner / intermediate · Etude advanced",
+   "order": 0,
+   "playalong": true,
+   "navigation": null,
+   "preferred_level": "facil",
+   "counts": {
+    "facil": 64,
+    "medio": 94,
+    "dificil": 1891,
+    "melb": 25
+   }
+  },
+  {
+   "id": "maple-street-etude-midibert-normal",
+   "title": "Maple Street — Etude + MidiBERT (normal)",
+   "file": "maple-street-etude-midibert-normal.json",
+   "duration": 60,
+   "builtin": false,
+   "added": 1792515126,
+   "kind": "banda",
+   "audio": "maple-street-etude-preview.full.mp3",
+   "credit": "Etude + MidiBERT · experimental · noncommercial",
+   "order": 0,
+   "playalong": true,
+   "navigation": {
+    "group": "maple-street-etude-midibert",
+    "version": "Normal"
+   },
+   "preferred_level": null,
+   "counts": {
+    "mb_sparse": 16,
+    "mb_vocal": 50,
+    "mb_bridge": 49,
+    "mb_accomp": 190,
+    "etude": 289
+   }
+  },
+  {
+   "id": "maple-street-etude-midibert-simple",
+   "title": "Maple Street — Etude + MidiBERT (simple)",
+   "file": "maple-street-etude-midibert-simple.json",
+   "duration": 60,
+   "builtin": false,
+   "added": 1792515126,
+   "kind": "banda",
+   "audio": "maple-street-etude-preview.full.mp3",
+   "credit": "Etude + MidiBERT · experimental · noncommercial",
+   "order": 0,
+   "playalong": true,
+   "navigation": {
+    "group": "maple-street-etude-midibert",
+    "version": "Simple"
+   },
+   "preferred_level": null,
+   "counts": {
+    "mb_sparse": 9,
+    "mb_vocal": 19,
+    "mb_bridge": 15,
+    "mb_accomp": 153,
+    "etude_simple": 187
+   }
+  },
+  {
+   "id": "maple-street-etude-preview",
+   "title": "Maple Street — Play along",
+   "file": "maple-street-etude-preview.json",
+   "duration": 60,
+   "builtin": false,
+   "added": 1792512313,
+   "kind": "banda",
+   "audio": "maple-street-etude-preview.full.mp3",
+   "credit": "Piano + melody · space to play",
+   "order": 0,
+   "playalong": true,
+   "navigation": null,
+   "preferred_level": "piano_phrases",
+   "counts": {
+    "pa": 13,
+    "acordes": 54,
+    "piano_phrases": 46
+   }
+  },
+  {
+   "id": "two-little-chords-415106",
+   "title": "Two Little Chords",
+   "file": "two-little-chords-415106.json",
+   "duration": 120.08,
+   "builtin": false,
+   "added": 1792415106,
+   "kind": "banda",
+   "audio": "two-little-chords-415106.backing.mp3",
+   "credit": null,
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "facil": 128,
+    "medio": 242,
+    "dificil": 722,
+    "completo": 1402,
+    "acordes": 320
+   }
+  },
+  {
+   "id": "frere-jacques",
+   "title": "Frère Jacques",
+   "file": "frere-jacques.json",
+   "duration": 19.46,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "facil": 32,
+    "medio": 40,
+    "dificil": 72,
+    "acordes": 4
+   }
+  },
+  {
+   "id": "parabens-a-voce",
+   "title": "Happy Birthday",
+   "file": "parabens-a-voce.json",
+   "duration": 17.3,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "facil": 25,
+    "medio": 34,
+    "dificil": 71,
+    "acordes": 36
+   }
+  },
+  {
+   "id": "jingle-bells",
+   "title": "Jingle Bells",
+   "file": "jingle-bells.json",
+   "duration": 34.1,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "facil": 51,
+    "medio": 67,
+    "dificil": 137,
+    "acordes": 40
+   }
+  },
+  {
+   "id": "mary-cordeirinho",
+   "title": "Mary Had a Little Lamb",
+   "file": "mary-cordeirinho.json",
+   "duration": 19.46,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "facil": 26,
+    "medio": 34,
+    "dificil": 70,
+    "acordes": 32
+   }
+  },
+  {
+   "id": "ode-a-alegria",
+   "title": "Ode to Joy (Beethoven)",
+   "file": "ode-a-alegria.json",
+   "duration": 20.2,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "facil": 30,
+    "medio": 39,
+    "dificil": 78,
+    "acordes": 36
+   }
+  },
+  {
+   "id": "brilha-brilha-estrelinha",
+   "title": "Twinkle, Twinkle, Little Star",
+   "file": "brilha-brilha-estrelinha.json",
+   "duration": 31.0,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": null,
+   "order": 0,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "facil": 42,
+    "medio": 79,
+    "dificil": 163,
+    "acordes": 148
+   }
+  },
+  {
+   "id": "mutopia-minueto-em-sol",
+   "title": "Minuet in G",
+   "file": "mutopia-minueto-em-sol.json",
+   "duration": 41.64,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 10,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 128,
+    "facil": 125,
+    "medio": 178,
+    "dificil": 204
+   }
+  },
+  {
+   "id": "mutopia-minueto-em-la-menor",
+   "title": "Minuet in A minor",
+   "file": "mutopia-minueto-em-la-menor.json",
+   "duration": 64.25,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 11,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 116,
+    "facil": 78,
+    "medio": 125,
+    "dificil": 165
+   }
+  },
+  {
+   "id": "mutopia-musette-em-re",
+   "title": "Musette in D",
+   "file": "mutopia-musette-em-re.json",
+   "duration": 20.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 12,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 84,
+    "facil": 51,
+    "medio": 109,
+    "dificil": 171
+   }
+  },
+  {
+   "id": "mutopia-minueto-em-si-bemol",
+   "title": "Minuet in B-flat",
+   "file": "mutopia-minueto-em-si-bemol.json",
+   "duration": 78.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 13,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 104,
+    "facil": 86,
+    "medio": 170,
+    "dificil": 225
+   }
+  },
+  {
+   "id": "mutopia-polonaise-em-fa",
+   "title": "Polonaise in F",
+   "file": "mutopia-polonaise-em-fa.json",
+   "duration": 48.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 14,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 68,
+    "facil": 51,
+    "medio": 168,
+    "dificil": 235
+   }
+  },
+  {
+   "id": "mutopia-preludio-em-do",
+   "title": "Prelude in C",
+   "file": "mutopia-preludio-em-do.json",
+   "duration": 140.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "J. S. Bach · Mutopia Project (public domain)",
+   "order": 15,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 140,
+    "medio": 468,
+    "dificil": 549
+   }
+  },
+  {
+   "id": "mutopia-cancao-de-embalar",
+   "title": "Lullaby (Wiegenlied)",
+   "file": "mutopia-cancao-de-embalar.json",
+   "duration": 40.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "F. Schubert · Mutopia Project (public domain)",
+   "order": 16,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 40,
+    "facil": 31,
+    "medio": 74,
+    "dificil": 221
+   }
+  },
+  {
+   "id": "mutopia-estudo-melodico-n-o-1",
+   "title": "Melodic Study No. 1",
+   "file": "mutopia-estudo-melodico-n-o-1.json",
+   "duration": 55.14,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "C. Czerny · Mutopia Project (public domain)",
+   "order": 17,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 132,
+    "facil": 118,
+    "medio": 207,
+    "dificil": 450
+   }
+  },
+  {
+   "id": "mutopia-estudo-melodico-n-o-2",
+   "title": "Melodic Study No. 2",
+   "file": "mutopia-estudo-melodico-n-o-2.json",
+   "duration": 49.06,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "C. Czerny · Mutopia Project (public domain)",
+   "order": 18,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 128,
+    "facil": 94,
+    "medio": 253,
+    "dificil": 498
+   }
+  },
+  {
+   "id": "mutopia-estudo-melodico-n-o-3",
+   "title": "Melodic Study No. 3",
+   "file": "mutopia-estudo-melodico-n-o-3.json",
+   "duration": 55.88,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "C. Czerny · Mutopia Project (public domain)",
+   "order": 19,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 192,
+    "facil": 129,
+    "medio": 246,
+    "dificil": 410
+   }
+  },
+  {
+   "id": "mutopia-fur-elise",
+   "title": "Für Elise",
+   "file": "mutopia-fur-elise.json",
+   "duration": 130.92,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "L. v. Beethoven · Mutopia Project (public domain)",
+   "order": 20,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 420,
+    "facil": 350,
+    "medio": 591,
+    "dificil": 905
+   }
+  },
+  {
+   "id": "mutopia-preludio-em-la-maior",
+   "title": "Prelude in A major",
+   "file": "mutopia-preludio-em-la-maior.json",
+   "duration": 24.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "F. Chopin · Mutopia Project (public domain)",
+   "order": 21,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 68,
+    "facil": 41,
+    "medio": 68,
+    "dificil": 168
+   }
+  },
+  {
+   "id": "mutopia-preludio-em-mi-menor",
+   "title": "Prelude in E minor",
+   "file": "mutopia-preludio-em-mi-menor.json",
+   "duration": 108.71,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "F. Chopin · Mutopia Project (public domain)",
+   "order": 22,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 104,
+    "facil": 39,
+    "medio": 126,
+    "dificil": 600
+   }
+  },
+  {
+   "id": "mutopia-marcha-turca",
+   "title": "Turkish March",
+   "file": "mutopia-marcha-turca.json",
+   "duration": 255.5,
+   "builtin": true,
+   "added": 0,
+   "kind": "piano",
+   "audio": null,
+   "credit": "W. A. Mozart · Mutopia Project (public domain)",
+   "order": 23,
+   "playalong": false,
+   "navigation": null,
+   "preferred_level": null,
+   "counts": {
+    "acordes": 512,
+    "facil": 213,
+    "medio": 840,
+    "dificil": 1614
+   }
+  }
+ ]
+}

@@ -1,0 +1,1327 @@
+{
+  "id": "lantern-road-arranjo-por-frases",
+  "title": "Lantern Road — arranjo por frases · 16 s",
+  "duration": 16.0,
+  "bpm": 120,
+  "bpb": 4,
+  "bar0": 0,
+  "beats": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0
+  ],
+  "downbeats": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "audio": "lantern-road-arranjo-por-frases.full.mp3",
+  "audio_vocals": "lantern-road-arranjo-por-frases.vocals.mp3",
+  "vocal_activity": [
+    [
+      0,
+      16
+    ]
+  ],
+  "kind": "banda",
+  "playalong": true,
+  "preview": true,
+  "builtin": false,
+  "added": 1792670159,
+  "preferred_level": "basics",
+  "default_src": "vocal_piano",
+  "preview_guide": true,
+  "piano_sound": "salamander",
+  "guide_sound": "piano",
+  "levels_v": 1,
+  "exercise_names": {
+    "basics": "Primeiros passos · motivos (22 notas)",
+    "facil": "Arranjo essencial · 29 notas",
+    "medio": "Arranjo fiel · 35 notas",
+    "melodia": "Referência · 40 notas"
+  },
+  "credit": "Arranjo elaborado nesta conversa · melodia transcrita pelo SheetSage2",
+  "levels": {
+    "basics": {
+      "notes": [
+        {
+          "t": 0.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 0.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 1.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 2.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 2.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 3.0,
+          "d": 0.5,
+          "m": 71,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 4.0,
+          "d": 1.0,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 5.0,
+          "d": 1.0,
+          "m": 60,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 6.0,
+          "d": 0.5,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 6.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 7.0,
+          "d": 0.5,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 8.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 8.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 9.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 10.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 10.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 11.0,
+          "d": 0.5,
+          "m": 71,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 12.0,
+          "d": 1.0,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 13.0,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 13.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 14.0,
+          "d": 1.0,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 8,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 8
+        },
+        {
+          "t": 15.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 8,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 8
+        }
+      ],
+      "transpose": 0,
+      "audio": "lantern-road-arranjo-por-frases.full.mp3"
+    },
+    "facil": {
+      "notes": [
+        {
+          "t": 0.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 0.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 1.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 1.5,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 2.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 2.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 3.0,
+          "d": 0.5,
+          "m": 71,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 3.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 4.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 4.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 5.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 5.5,
+          "d": 0.5,
+          "m": 60,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 6.0,
+          "d": 0.5,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 6.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 7.0,
+          "d": 0.5,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 8.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 8.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 9.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 9.5,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 10.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 10.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 11.0,
+          "d": 0.5,
+          "m": 71,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 12.0,
+          "d": 0.5,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 12.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 13.0,
+          "d": 0.5,
+          "m": 72,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 13.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 14.0,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 8,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 8
+        },
+        {
+          "t": 14.5,
+          "d": 0.5,
+          "m": 71,
+          "v": 74,
+          "h": "R",
+          "bar": 8,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 8
+        },
+        {
+          "t": 15.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 8,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 8
+        }
+      ],
+      "transpose": 0,
+      "audio": "lantern-road-arranjo-por-frases.full.mp3"
+    },
+    "medio": {
+      "notes": [
+        {
+          "t": 0.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 0.5,
+          "d": 0.25,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 0.75,
+          "d": 0.25,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 1.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 1.5,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 1,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 1
+        },
+        {
+          "t": 2.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 2.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 3.0,
+          "d": 0.5,
+          "m": 71,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 3.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 2,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 2
+        },
+        {
+          "t": 4.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 4.5,
+          "d": 0.25,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 4.75,
+          "d": 0.25,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 5.0,
+          "d": 0.25,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 5.25,
+          "d": 0.75,
+          "m": 60,
+          "v": 74,
+          "h": "R",
+          "bar": 3,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 3
+        },
+        {
+          "t": 6.0,
+          "d": 0.5,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 6.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 7.0,
+          "d": 0.25,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 7.25,
+          "d": 0.25,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 7.75,
+          "d": 0.25,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 4,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 4
+        },
+        {
+          "t": 8.0,
+          "d": 0.25,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 8.25,
+          "d": 0.25,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 8.5,
+          "d": 0.5,
+          "m": 64,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 9.0,
+          "d": 0.5,
+          "m": 60,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 9.5,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 5,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 5
+        },
+        {
+          "t": 10.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 10.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 11.0,
+          "d": 0.5,
+          "m": 71,
+          "v": 74,
+          "h": "R",
+          "bar": 6,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 6
+        },
+        {
+          "t": 12.0,
+          "d": 0.5,
+          "m": 65,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 12.5,
+          "d": 0.25,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 12.75,
+          "d": 0.25,
+          "m": 72,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 13.0,
+          "d": 0.5,
+          "m": 69,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 13.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 7,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 7
+        },
+        {
+          "t": 14.0,
+          "d": 0.5,
+          "m": 67,
+          "v": 74,
+          "h": "R",
+          "bar": 8,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 8
+        },
+        {
+          "t": 14.5,
+          "d": 0.5,
+          "m": 71,
+          "v": 74,
+          "h": "R",
+          "bar": 8,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 8
+        },
+        {
+          "t": 15.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 74,
+          "h": "R",
+          "bar": 8,
+          "origin": "authored_arrangement_in_conversation",
+          "musical_decision": 8
+        }
+      ],
+      "transpose": 0,
+      "audio": "lantern-road-arranjo-por-frases.full.mp3"
+    },
+    "melodia": {
+      "notes": [
+        {
+          "t": 0.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 0.5,
+          "d": 0.25,
+          "m": 67,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 0.75,
+          "d": 0.25,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 1.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 1.5,
+          "d": 0.5,
+          "m": 62,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 2.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 2.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 3.0,
+          "d": 0.5,
+          "m": 71,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 3.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 4.0,
+          "d": 0.5,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 4.5,
+          "d": 0.25,
+          "m": 69,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 4.75,
+          "d": 0.25,
+          "m": 67,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 5.0,
+          "d": 0.25,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 5.25,
+          "d": 0.25,
+          "m": 60,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 5.5,
+          "d": 0.25,
+          "m": 60,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 5.75,
+          "d": 0.25,
+          "m": 60,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 6.0,
+          "d": 0.25,
+          "m": 65,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 6.25,
+          "d": 0.25,
+          "m": 65,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 6.5,
+          "d": 0.5,
+          "m": 69,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 7.0,
+          "d": 0.25,
+          "m": 67,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 7.25,
+          "d": 0.25,
+          "m": 65,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 7.75,
+          "d": 0.25,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 8.0,
+          "d": 0.25,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 8.25,
+          "d": 0.25,
+          "m": 67,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 8.5,
+          "d": 0.5,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 9.0,
+          "d": 0.25,
+          "m": 60,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 9.25,
+          "d": 0.25,
+          "m": 60,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 9.5,
+          "d": 0.5,
+          "m": 62,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 10.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 10.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 11.0,
+          "d": 0.5,
+          "m": 71,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 11.75,
+          "d": 0.25,
+          "m": 64,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 12.0,
+          "d": 0.5,
+          "m": 65,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 12.5,
+          "d": 0.25,
+          "m": 69,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 12.75,
+          "d": 0.25,
+          "m": 72,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 13.0,
+          "d": 0.5,
+          "m": 69,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 13.5,
+          "d": 0.5,
+          "m": 67,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 14.0,
+          "d": 0.5,
+          "m": 67,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 14.5,
+          "d": 0.5,
+          "m": 71,
+          "v": 72,
+          "h": "R"
+        },
+        {
+          "t": 15.0,
+          "d": 0.5,
+          "m": 62,
+          "v": 72,
+          "h": "R"
+        }
+      ],
+      "transpose": 0,
+      "audio": "lantern-road-arranjo-por-frases.full.mp3"
+    }
+  },
+  "attribution": {
+    "transcription": "m-a-p/SheetSage2",
+    "transcription_weights_license": "CC BY-NC 4.0",
+    "piano_samples": "Salamander Grand Piano V3, Alexander Holm, CC BY 3.0"
+  },
+  "limitations": [
+    "Authored eight-bar proof of concept; not an automated whole-song system.",
+    "First-steps version uses quarters, halves and phrase-end rests, spans C4–B4 and still requires hand movement.",
+    "Essential version uses quarter notes but spans C4–C5 and requires hand movement.",
+    "Faithful version retains eighth-note turns. Neither is certified for a first piano lesson.",
+    "Fingerings have not been validated. Start at a slower tempo if needed.",
+    "Musical recognisability requires listening review; no claim of auditory evaluation."
+  ],
+  "arrangement_decisions": [
+    {
+      "bar": 1,
+      "harmony": "C",
+      "identity": "E–G–E–D: opening turn and descending arrival.",
+      "essential": "Keep E–G–E–D on four quarter notes. Absorb the short repeated E into the turn.",
+      "faithful": "Retain the original five attacks and the two eighth notes."
+    },
+    {
+      "bar": 2,
+      "harmony": "G",
+      "identity": "D–G–B–A: upward broken chord followed by a step down.",
+      "essential": "Keep all four notes and their original quarter-note rhythm.",
+      "faithful": "Keep all four notes. The hand needs to move; do not claim a fixed five-key exercise."
+    },
+    {
+      "bar": 3,
+      "harmony": "Am7",
+      "identity": "E pickup, A peak, descent through G/E towards repeated C.",
+      "essential": "Keep E–A–E–C. Retain the pickup, peak and arrival; omit the passing G and C repetitions.",
+      "faithful": "Keep E–A–G–E–C at their source attacks; sustain the final C instead of repeating it."
+    },
+    {
+      "bar": 4,
+      "harmony": "F",
+      "identity": "F–A arch returning to F; short E leads into the next C bar.",
+      "essential": "Use F–A–F and a one-beat rest. Simplify the descending passing G and omit the E pickup.",
+      "faithful": "Merge the initial repeated Fs; retain G–F, the breath and the E pickup."
+    },
+    {
+      "bar": 5,
+      "harmony": "C",
+      "identity": "Related E–G–E turn with C below and D as arrival.",
+      "essential": "Repeat the opening E–G–E–D rhythm to make a learnable return of the theme. This deliberately omits the low C turn.",
+      "faithful": "Keep E–G–E–C–D; merge the repeated C into one longer note."
+    },
+    {
+      "bar": 6,
+      "harmony": "G",
+      "identity": "Return of D–G–B, then a short E pickup.",
+      "essential": "Keep D–G–B and a full beat of breathing space.",
+      "faithful": "Keep D–G–B; omit only the short E pickup."
+    },
+    {
+      "bar": 7,
+      "harmony": "F",
+      "identity": "F–A–C5 peak, then A–G descent.",
+      "essential": "Keep the ascending F–A–C5 shape and G arrival. Put C5 on beat 3, omitting the inner A return.",
+      "faithful": "Retain the original F–A–C5–A–G rhythm and pitches."
+    },
+    {
+      "bar": 8,
+      "harmony": "G",
+      "identity": "G–B–D and a rest: dominant ending, inviting continuation.",
+      "essential": "Keep the original notes and closing rest.",
+      "faithful": "Keep the original notes and closing rest."
+    }
+  ],
+  "first_steps_decisions": [
+    "Play E–G–E together, then breathe while the voice supplies the final D.",
+    "Play D–G–B together; let the voice finish the A during the rest.",
+    "Keep E and the C arrival as two half notes, replacing the inner Am7 turn.",
+    "Keep the F–A–F arch and its full-beat breathing space.",
+    "Repeat the exact same E–G–E exercise, including its rest.",
+    "Repeat the exact same D–G–B response, including its rest.",
+    "Hold F, then play A–G at the source arrivals. Omit the high C to avoid the extra register change.",
+    "Hold G through the inner B, then land on the source D and breathe. Avoid the B-to-D leap."
+  ]
+}
